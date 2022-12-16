@@ -1,0 +1,35 @@
+.buttonMain {
+	background-color: transparent;
+	border: solid;
+	color: white;
+}
+
+.materialIcons {
+	font-family: "Material Icons";
+	font-weight: normal;
+	font-style: normal;
+	font-size: 36px;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.map {
+	border: 0.2cm;
+	border-style: solid;
+	width: 100%;
+    height: 70%;
+	border-color: yellow;
+}

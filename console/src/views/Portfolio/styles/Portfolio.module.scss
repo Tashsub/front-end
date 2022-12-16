@@ -1,8 +1,10 @@
 .shell {
-  align-content: center;
-  color: var(--text-white-he);
-  display: grid;
-  height: 100vh;
-  justify-items: center;
-  text-align: center;
+	// align-content: center;
+	color: var(--text-white-he);
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	// overflow: hidden;
+	// justify-items: center;
+	// text-align: center;
 }
