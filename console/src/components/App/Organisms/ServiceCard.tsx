@@ -3,7 +3,7 @@ import styles from "./styles/Organisms.module.scss";
 import ServiceColorItem from "../Atoms/ServiceColorItem";
 import { Text as ScheduleText } from "../Atoms/Text";
 import { Text as ServiceText } from "../Atoms/Text";
-import Tooltip from "../Atoms/Tooltip";
+import { TooltipIcon } from "../Atoms/TooltipIcon";
 
 type appProps = {
 	scheduleNow: string;
@@ -19,7 +19,7 @@ function ServiceCard({ scheduleNow, scheduleNext }: appProps) {
 
 	const scheduleTextStyle = {
 		margin: "0",
-		color: "var(--text-black-le)"
+		color: "var(--text-black-le)",
 	};
 
 	return (
@@ -32,7 +32,7 @@ function ServiceCard({ scheduleNow, scheduleNext }: appProps) {
 				<ServiceText text={"DC Low"} style={serviceTextStyle} />
 			</div>
 			<div>
-				<Tooltip/>
+				<TooltipIcon></TooltipIcon>
 			</div>
 		</>
 	);
