@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../Atoms/Logo";
 import styles from "./styles/Molecules.module.scss";
-import Text from "../Atoms/Text";
+import {Text} from "../Atoms/Text";
 
 function LogoWithText() {
 	const {
@@ -14,8 +14,8 @@ function LogoWithText() {
 		<div className={logoWithTextWrapper}>
 			<Logo height={60} />
 			<div className={textWrapper}>
-				<Text style={logoTextBoldWhite} text="Kraken" />
-				<Text style={logoTextPurple} text="Flex" />
+				<Text className={logoTextBoldWhite} text="Kraken" />
+				<Text className={logoTextPurple} text="Flex" />
 			</div>
 		</div>
 	);

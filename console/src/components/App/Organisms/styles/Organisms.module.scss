@@ -1,4 +1,4 @@
-$marginHeaders:  1%;
+$marginHeaders: 1%;
 
 @mixin floaterToPosition($position) {
 	float: $position;
@@ -15,19 +15,53 @@ $marginHeaders:  1%;
 
 .logoWithText {
 	margin-right: 0;
-    margin-left: $marginHeaders;
+	margin-left: $marginHeaders;
 }
 
 .menu {
 	margin-left: auto;
-    margin-right: $marginHeaders;
+	margin-right: $marginHeaders;
 }
 
-.contentContainer{
-    display: flex;
-    border-color: salmon;
-    border-style: solid;
-    border-width: 0.2cm;
-    height: 100%;
+.contentContainer {
+	display: grid;
+	padding: 1.5em;
+	display: flex;
+	border-color: salmon;
+	border-style: solid;
+	border-width: 0.2cm;
+	height: 100%;
+}
+
+.card {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	padding: 10px;
+	height: 3cm;
+	width: 100%;
+	background-color: var(--surface);
+	color: var(--text-black-he); //text color
+	border: slateblue;
+	border-style: solid;
+	border-width: 0.1cm;
+}
+
+.serviceCardWrapper {
+	display: flex;
+	border: rgb(252, 80, 0);
+	border-style: solid;
+	border-width: 0.1cm;
+}
+
+
+
+.tt {
+	border: rgb(252, 80, 0);
+	border-style: solid;
+	border-width: 0.1cm;
+}
+
+.serviceTextWrapper{
+	font-size: 1em;
 }
 

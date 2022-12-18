@@ -2,10 +2,13 @@ import React from "react";
 
 type appProps = {
 	text: string;
-	style: any;
+	className?: any;
+	style?: object;
 };
-function Text({ text, style }: appProps) {
-	return <p className={style}>{text}</p>;
+export function Text({ text, className, style }: appProps) {
+	return (
+		<p className={className} style={style}>
+			{text}
+		</p>
+	);
 }
-
-export default Text;
