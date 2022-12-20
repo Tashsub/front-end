@@ -1,12 +1,21 @@
 $marginHeaders: 1%;
+$small: 660px;
+$medium: 900px;
+$borderRadius: 5px;
+$searchBarPadding: 3cm;
 
 @mixin floaterToPosition($position) {
 	float: $position;
 }
 
+@mixin verticalAlign {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .header {
 	display: flex;
-	border-style: solid;
 	width: 100%;
 	height: fit-content;
 	background-color: var(--navigation);
@@ -24,44 +33,91 @@ $marginHeaders: 1%;
 }
 
 .contentContainer {
+	position: static;
 	display: grid;
-	padding: 1.5em;
-	display: flex;
-	border-color: salmon;
-	border-style: solid;
-	border-width: 0.2cm;
+	padding: 3em;
 	height: 100%;
+	background-color: var(--background);
+	overflow-y: scroll;
 }
 
 .card {
 	display: grid;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 1.2fr 1fr;
 	padding: 10px;
-	height: 3cm;
+	height: fit-content;
 	width: 100%;
 	background-color: var(--surface);
 	color: var(--text-black-he); //text color
-	border: slateblue;
-	border-style: solid;
-	border-width: 0.1cm;
+	border-radius: $borderRadius;
+	@media screen and (max-width: $small) {
+		display: flex;
+		flex-direction: column;
+		height: fit-content;
+	}
 }
 
 .serviceCardWrapper {
 	display: flex;
-	border: rgb(252, 80, 0);
-	border-style: solid;
-	border-width: 0.1cm;
+	background-color: var(--background);
+	padding: 3px;
+	border-radius: $borderRadius;
+	@media screen and (max-width: $small) {
+		display: flex;
+		flex-direction: column;
+		height: fit-content;
+	}
 }
 
-
-
-.tt {
-	border: rgb(252, 80, 0);
-	border-style: solid;
-	border-width: 0.1cm;
-}
-
-.serviceTextWrapper{
+.serviceTextWrapper {
+	@include verticalAlign;
 	font-size: 1em;
 }
 
+.serviceCard {
+	border-radius: $borderRadius;
+	display: grid;
+	padding: 8px;
+	background-color: var(--surface);
+	width: 100%;
+	grid-template-columns: 1.5fr 10fr 2fr;
+	margin: 4px;
+	@media screen and (max-width: $small) {
+		margin: 1px;
+		width: auto;
+		margin-top: 5px;
+	}
+}
+
+.toolTipWrapper {
+	@include verticalAlign;
+}
+
+.card ~ .card {
+	margin-top: 12px;
+}
+
+.box {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	top: 600px;
+	border-style: solid;
+	border-color: red;
+	@media screen and (max-width: $small) {
+		justify-content: center;
+		z-index: 5;
+		position: relative;
+		margin: auto;
+		width: 50%;
+		top: -60px;
+		padding: 0;
+		margin: 0;
+	}
+}
+.ss{
+	border: solid;
+	border-color: green;
+	border-width: 2cm;
+
+}

@@ -4,8 +4,8 @@ import styles from "./styles/Atoms.module.scss";
 
 function Map() {
 	const { map } = styles;
+
 	const key = "AIzaSyCcGn9gVldIXU-ozZqMdBFu4l8aZiq8wa8";
-	const apiKey = process.env.GOOGLE_APP_API_KEY;
 
 	const containerStyle = {
 		width: "100%",

@@ -16,20 +16,17 @@
 .textWrapper {
 	display: flex;
 	flex-direction: column;
-	border: 0.2cm;
-	border-style: solid;
-	border-color: rgb(239, 25, 25);
 	padding: 0;
 	margin: 0;
+	margin-left: 20px;
 	text-align: left;
 	height: auto;
 }
 
 .logoWithTextWrapper {
+	padding-top: 0.5cm;
+	padding-bottom: 0.5cm;
 	align-items: center;
-	border: 0.2cm;
-	border-style: solid;
-	border-color: rgb(36, 205, 109);
 	display: flex;
 	flex-direction: row;
 	width: auto;
@@ -40,27 +37,32 @@
 	@include logoText(1cm, 1000, --text-white-he);
 }
 
-.logoTextPurple {
-	@include logoText(1cm, 350, --primary);
+.logoTextPink {
+	@include logoText(1cm, 350,  --secondary);
+}
+
+.divRoundForIcon {
+	padding: 0;
+	text-align: center;
+	height: 0.7cm;
+	width: 0.7cm;
+	border-radius: 2cm;
 }
 
 .iconWithTextWrapper {
 	display: grid;
-	grid-template-columns: 0.5fr 9.5fr;
+	grid-template-columns: 1fr 9.5fr;
 	font-size: large;
-	border: rgb(2, 32, 129);
-	// height: 100%;
-	border-style: solid;
-}
-
-.debugBorder {
-	border: orange;
-	border-style: solid;
-	border-width: 0.1cm;
 }
 
 .iconDiv {
 	@include centerDiv;
 }
 
+.buttonWrapper {
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+}
 

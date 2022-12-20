@@ -2,23 +2,37 @@ import React from "react";
 import IconWithText from "../Molecules/IconWithText";
 import styles from "./styles/Organisms.module.scss";
 import ServiceCard from "./ServiceCard";
+import { GetMegaWatts } from "Extensions/SizeConverterExtensions";
 
 type appProps = {
-    schedule: string
-}
+	status: string;
+	reading: number;
+	name: string;
+	scheduleNow?: scheduleProps;
+	scheduleNext?: scheduleProps;
+};
 
-function Card({schedule}: appProps) {
+type scheduleProps = {
+	service: string;
+	start: string;
+	end: string;
+};
 
-	const { card, serviceCardWrapper, tt } = styles;
+function Card({ status, reading, name, scheduleNow, scheduleNext }: appProps) {
+	const { card, serviceCardWrapper } = styles;
+
+	const megaWattReading = GetMegaWatts(reading);
+	const finalReading = `${megaWattReading}MW`;
 
 	return (
 		<div className={card}>
-			<div className={tt}>
-				<IconWithText status={"good"} name={"Kraken Arthur"} reading={"20MW"} />
+			<div>
+				<IconWithText status={status} name={name} reading={finalReading} />
 			</div>
 			<div className={serviceCardWrapper}>
-                <ServiceCard scheduleNow={schedule} scheduleNext={schedule}/>
-            </div>
+				<ServiceCard scheduleText={"Now"} schedule={scheduleNow} />
+				<ServiceCard scheduleText={"Next"} schedule={scheduleNext} />
+			</div>
 		</div>
 	);
 }

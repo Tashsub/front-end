@@ -1,31 +1,27 @@
 import React from "react";
-import styles from "./styles/Atoms.module.scss";
-
-function backgroundColor(css: string) {
-	return {
-		backgroundColor: `var(${css})`,
-	};
-}
+import styles from "./styles/Molecules.module.scss";
+import Icon from "../Atoms/Icon";
+import { GetBGColorExtensions } from "Extensions/GetColorExtensions";
 
 const statusObj = {
 	good: {
 		text: "good",
-		css: backgroundColor("--status-good"),
+		css: GetBGColorExtensions("--status-good"),
 		icon: "done",
 	},
 	alert: {
 		text: "alert",
-		css: backgroundColor("--status-alert"),
-		icon: "alert",
+		css: GetBGColorExtensions("--status-alert"),
+		icon: "priority_high",
 	},
 	unknown: {
 		text: "unknown",
-		css: backgroundColor("--status-unknown"),
+		css: GetBGColorExtensions("--status-unknown"),
 		icon: "question_mark",
 	},
 	warning: {
 		text: "warning",
-		css: backgroundColor("--status-warning"),
+		css: GetBGColorExtensions("--status-warning"),
 		icon: "warning",
 	},
 };
@@ -34,8 +30,8 @@ type appProps = {
 	status: string;
 };
 
-function Icon({ status }: appProps) {
-	const { materialIcons, divRoundForIcon } = styles;
+function IconInCircle({ status }: appProps) {
+	const { divRoundForIcon } = styles;
 
 	let stat,
 		icon,
@@ -64,18 +60,11 @@ function Icon({ status }: appProps) {
 			break;
 	}
 
-	console.log(icon);
-
 	return (
 		<div className={divRoundForIcon} style={backgroundColor}>
-			<span
-				className={materialIcons}
-				style={{ color: "white", fontSize: "25px", }}
-			>
-				{icon}
-			</span>
+			<Icon icon={icon} iconSize={25} iconColor={"--text-white-he"} />
 		</div>
 	);
 }
 
-export default Icon;
+export default IconInCircle;

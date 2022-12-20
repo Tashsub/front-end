@@ -1,6 +1,6 @@
 import React from "react";
-import Icon from "../Atoms/RoundedIcon";
-import {Text} from "../Atoms/Text";
+import IconInCircle from "./IconInCircle";
+import { Text } from "../Atoms/Text";
 import styles from "./styles/Molecules.module.scss";
 
 type appProps = {
@@ -10,19 +10,19 @@ type appProps = {
 };
 
 const style = {
-    fontWeight: "bold",
-}
+	fontWeight: "bold",
+};
 
 function IconWithText({ status, name, reading }: appProps) {
-	const { iconWithTextWrapper, debugBorder, iconDiv } = styles;
+	const { iconWithTextWrapper, iconDiv } = styles;
 
 	return (
 		<div className={iconWithTextWrapper}>
-			<div className={iconDiv} >
-				<Icon status={status} />
+			<div className={iconDiv}>
+				<IconInCircle status={status} />
 			</div>
-			<div className={debugBorder} >
-				<Text text={name} style={style}  />
+			<div>
+				<Text text={name} style={style} />
 				<Text text={reading} />
 			</div>
 		</div>
