@@ -32,7 +32,6 @@ $background-color: white;
 	height: 140%;
 	margin: 0;
 	padding: 0;
-	position: relative;
 }
 
 .serviceColorItem {
@@ -41,7 +40,7 @@ $background-color: white;
 	border-radius: 2px;
 }
 
-.error{
+.error {
 	height: fit-content;
 	padding: 1cm;
 	background-color: var(--text-white-me);

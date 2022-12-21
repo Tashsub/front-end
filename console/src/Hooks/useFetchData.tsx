@@ -7,7 +7,7 @@ type appProps = {
 };
 
 const useFetchData = ({ url, method, body }: appProps) => {
-	const [error, setError] = useState("");
+	const [error, setError] = useState<string | null>(null);
 	const [results, setResults] = useState([]);
 	const [loading, setLoading] = useState(true);
 
@@ -33,4 +33,4 @@ const useFetchData = ({ url, method, body }: appProps) => {
 	return { loading, results, error };
 };
 
-export default useFetchData;
+export {useFetchData};

@@ -14,14 +14,14 @@ const style = {
 };
 
 function IconWithText({ status, name, reading }: appProps) {
-	const { iconWithTextWrapper, iconDiv } = styles;
+	const { iconWithTextWrapper, iconDiv, textNextToIcon } = styles;
 
 	return (
 		<div className={iconWithTextWrapper}>
 			<div className={iconDiv}>
 				<IconInCircle status={status} />
 			</div>
-			<div>
+			<div className={textNextToIcon}>
 				<Text text={name} style={style} />
 				<Text text={reading} />
 			</div>

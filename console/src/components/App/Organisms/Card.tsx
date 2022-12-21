@@ -25,7 +25,7 @@ function Card({ status, reading, name, scheduleNow, scheduleNext }: appProps) {
 	const finalReading = `${megaWattReading}MW`;
 
 	return (
-		<div className={card}>
+		<div className={card} data-testid="site-cards">
 			<div>
 				<IconWithText status={status} name={name} reading={finalReading} />
 			</div>

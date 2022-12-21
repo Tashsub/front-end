@@ -1,5 +1,5 @@
 $marginHeaders: 1%;
-$small: 660px;
+$small: 800px;
 $medium: 900px;
 $borderRadius: 5px;
 $searchBarPadding: 3cm;
@@ -39,6 +39,11 @@ $searchBarPadding: 3cm;
 	height: 100%;
 	background-color: var(--background);
 	overflow-y: scroll;
+	@media screen and (max-width: $small) {
+		display: flex;
+		flex-direction: column;
+		overflow-x: hidden;
+	}
 }
 
 .card {
@@ -46,7 +51,6 @@ $searchBarPadding: 3cm;
 	grid-template-columns: 1.2fr 1fr;
 	padding: 10px;
 	height: fit-content;
-	width: 100%;
 	background-color: var(--surface);
 	color: var(--text-black-he); //text color
 	border-radius: $borderRadius;
@@ -98,26 +102,13 @@ $searchBarPadding: 3cm;
 }
 
 .box {
-	display: flex;
-	flex-direction: row;
-	position: absolute;
-	top: 600px;
-	border-style: solid;
-	border-color: red;
+	width: 9cm;
+	background-color: var(--background);
+	top: 550px;
+	margin-bottom: 40px;
 	@media screen and (max-width: $small) {
-		justify-content: center;
-		z-index: 5;
-		position: relative;
-		margin: auto;
-		width: 50%;
-		top: -60px;
-		padding: 0;
-		margin: 0;
+		position: grid;
+		place-self: center;
+		top: -30px;
 	}
-}
-.ss{
-	border: solid;
-	border-color: green;
-	border-width: 2cm;
-
 }

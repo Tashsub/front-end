@@ -1,10 +1,12 @@
+$small: 800px;
+
 @mixin defaultText {
 	padding: 0;
 	margin: 0;
 }
 
-@mixin centerDiv{
-    margin: auto
+@mixin centerDiv {
+	margin: auto;
 }
 @mixin logoText($fontSize, $fontWeight, $color) {
 	@include defaultText;
@@ -38,7 +40,7 @@
 }
 
 .logoTextPink {
-	@include logoText(1cm, 350,  --secondary);
+	@include logoText(1cm, 350, --secondary);
 }
 
 .divRoundForIcon {
@@ -53,10 +55,20 @@
 	display: grid;
 	grid-template-columns: 1fr 9.5fr;
 	font-size: large;
+	@media screen and (max-width: $small) {
+		grid-template-columns: 0.2fr 1fr;
+		grid-auto-flow: dense;
+		direction: rtl;
+		margin-left: 20px;
+	}
 }
 
 .iconDiv {
 	@include centerDiv;
+}
+
+.textNextToIcon {
+	text-align: left;
 }
 
 .buttonWrapper {
@@ -66,3 +78,6 @@
 	padding: 0;
 }
 
+.autoComplete {
+	background-color: var(--background);
+}
