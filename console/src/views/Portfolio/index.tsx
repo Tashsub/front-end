@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./styles/Portfolio.module.scss";
 import Menu from "components/App/Organisms/Header";
-import Map from "components/App/Atoms/MapPortfolio";
+import Map from "components/App/Molecules/MapPortfolio";
 import ContentContainer from "components/App/Organisms/ContentContainer";
 import { useFetchData } from "Hooks/useFetchData";
 import { apiEndpoints } from "Api/Endpoints";
@@ -50,12 +50,8 @@ export default function Portfolio() {
 	return (
 		<div className={shell}>
 			<Menu />
-			{results && (
-				<>
-					<Map sites={sites} />
-					<ContentContainer sites={sites} error={error} getSearch={setFilter} />
-				</>
-			)}
+			<Map sites={sites} />
+			<ContentContainer sites={sites} error={error} getSearch={setFilter} />)
 		</div>
 	);
 }

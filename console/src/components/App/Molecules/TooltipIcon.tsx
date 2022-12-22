@@ -3,7 +3,7 @@ import styles from "./styles/Molecules.module.scss";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css"; // optional
 import Icon from "../Atoms/Icon";
-import { JsxElement } from "typescript";
+
 
 type appProps = {
 	tooltipContent: ReactElement;

@@ -1,6 +1,6 @@
 import styles from "./styles/site.module.scss";
 import Menu from "components/App/Organisms/Header";
-import MapSite from "components/App/Atoms/MapSite";
+import MapSite from "components/App/Molecules/MapSite";
 import { useNavigate, useParams } from "react-router-dom";
 import { apiEndpoints } from "Api/Endpoints";
 import { useFetchData } from "Hooks/useFetchData";

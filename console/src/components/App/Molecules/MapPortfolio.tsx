@@ -1,9 +1,10 @@
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import styles from "./styles/Atoms.module.scss";
+import styles from "./styles/Molecules.module.scss";
 import markerIconGreen from "assets/markerGreen.svg";
 import markerIconRed from "assets/markerRed.svg";
 import { useNavigate } from "react-router-dom";
+import { key } from "Api/GoogleMapsKey";
 
 type appProps = {
 	sites: Array<any>;
@@ -13,14 +14,11 @@ function Map({ sites }: appProps) {
 	const { map } = styles;
 
 	const navigate = useNavigate();
-	const handleClick = (id: string) => navigate(`/site/:${id}`);
 
 	const containerStyle = {
 		width: "100%",
 		height: "100%",
 	};
-
-	const key = "AIzaSyCcGn9gVldIXU-ozZqMdBFu4l8aZiq8wa8";
 
 	const center = {
 		lat: 53.65,
@@ -44,8 +42,17 @@ function Map({ sites }: appProps) {
 
 	return (
 		<div className={map}>
-			<LoadScript googleMapsApiKey={key} >
-				<GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
+			<LoadScript googleMapsApiKey={key}>
+				<GoogleMap
+					mapContainerStyle={containerStyle}
+					center={center}
+					zoom={9}
+					options={{
+						mapTypeControl: false,
+						scaleControl: true,
+						fullscreenControl: false,
+					}}
+				>
 					{/* Child components, such as markers, info windows, etc. */}
 					{markers}
 				</GoogleMap>

@@ -18,12 +18,10 @@ const useFetchData = ({ url, method, body }: appProps) => {
 				if (!response.ok) {
 					throw Error(response.statusText);
 				}
-				console.log("fetching data ");
 				return response.json();
 			})
 			.then(function (response) {
 				setResults(response);
-				console.log(response);
 			})
 			.catch(function (error) {
 				if (error instanceof Error) {
@@ -33,34 +31,7 @@ const useFetchData = ({ url, method, body }: appProps) => {
 			.finally(() => {
 				setLoading(false);
 			});
-	}, []);
-
-	// async function doFetch(endpoint:string) {
-	// 	try {
-	// 		console.log("here in custom hook");
-	// 		const response = await fetch(endpoint, { method: method, body: body });
-	// 		console.log(response);
-
-	// 		if (!response.ok) {
-	// 			const message = `An error has occurred: ${response.status}`;
-	// 			throw new Error(message);
-	// 		}
-
-	// 		const result = await response?.json();
-	// 		console.log(result);
-
-	// 		setResults(result);
-	// 	} catch (error) {
-	// 		if (error instanceof Error) {
-	// 			setError(error.message);
-	// 		}
-	// 	}
-	// }
-
-	// useEffect(() => {
-	// 	doFetch(endpoint);
-	// }, [endpoint]);
-
+	}, [endpoint]);
 	return { loading, results, error };
 };
 

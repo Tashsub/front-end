@@ -8,7 +8,7 @@ $small: 800px;
 @mixin centerDiv {
 	margin: auto;
 }
-@mixin logoText($fontSize, $fontWeight, $color) {
+@mixin textFormat($fontSize, $fontWeight, $color) {
 	@include defaultText;
 	font-size: $fontSize;
 	font-weight: $fontWeight;
@@ -36,11 +36,11 @@ $small: 800px;
 }
 
 .logoTextBoldWhite {
-	@include logoText(1cm, 1000, --text-white-he);
+	@include textFormat(1cm, 1000, --text-white-he);
 }
 
 .logoTextPink {
-	@include logoText(1cm, 350, --secondary);
+	@include textFormat(1cm, 350, --secondary);
 	margin-top: -10px;
 }
 
@@ -81,4 +81,48 @@ $small: 800px;
 
 .autoComplete {
 	background-color: var(--background);
+}
+
+.map {
+	position: relative;
+	height: 170%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.loading {
+	height: 10cm;
+	width: 100%;
+	border-color: red;
+	border-width: 1cm;
+	border-style: solid;
+
+	background-color: var(----overlay-white-04);
+}
+
+.overlay {
+	position: absolute;
+	background-color: var(--overlay-black-48);
+	height: 100%;
+	width: 100%;
+	top: 0;
+	right: 0;
+	text-align: left;
+	background: linear-gradient(to bottom, var(--overlay-black-96), transparent);
+}
+
+.overlayContent {
+	width: 100%;
+	height: fit-content;
+	margin-top: 1.5cm;
+	margin-left: 2cm;
+}
+
+.siteName {
+	@include textFormat(30px, 800, --text-white-he);
+}
+
+.siteSize {
+	@include textFormat(20px, 100, --text-white-he);
 }
