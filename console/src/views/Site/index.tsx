@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { apiEndpoints } from "Api/Endpoints";
 import { useFetchData } from "Hooks/useFetchData";
 import ErrorMessage from "components/App/Atoms/ErrorMessage";
+import ContentContainerSite from "components/App/Organisms/ContentContainerSite";
 
 export default function Site() {
 	const { shell, homeButton } = styles;
@@ -46,6 +47,7 @@ export default function Site() {
 					>
 						Return to Home
 					</button>
+					<ContentContainerSite site={site}/>
 				</>
 			)}
 		</div>

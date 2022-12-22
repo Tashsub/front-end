@@ -19,6 +19,7 @@ function ContentContainer({ sites, error, getSearch }: appProps) {
 		return (
 			<Card
 				key={site.id}
+				id={site.id}
 				name={site.name}
 				reading={site.size}
 				status={site.status}

@@ -1,7 +1,7 @@
 import React from "react";
 
 type appProps = {
-	text: string;
+	text: string | number | undefined;
 	className?: any;
 	style?: object;
 };

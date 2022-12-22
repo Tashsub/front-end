@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./styles/Portfolio.module.scss";
 import Menu from "components/App/Organisms/Header";
 import Map from "components/App/Molecules/MapPortfolio";
-import ContentContainer from "components/App/Organisms/ContentContainer";
+import ContentContainer from "components/App/Organisms/ContentContainerPortfolio";
 import { useFetchData } from "Hooks/useFetchData";
 import { apiEndpoints } from "Api/Endpoints";
 import { sortArrayExtensions } from "Extensions/SortArrayExtensions";

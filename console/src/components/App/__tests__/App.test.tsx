@@ -10,7 +10,7 @@ import { fireEvent, screen, render, within } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 // the component to test
-import ContentContainer from "../Organisms/ContentContainer";
+import ContentContainer from "../Organisms/ContentContainerPortfolio";
 
 // the data from an API call
 import apiData from "../../../../../mockAPI/src/db.json";
