@@ -3,6 +3,7 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import styles from "./styles/Atoms.module.scss";
 import markerIconGreen from "assets/markerGreen.svg";
 import markerIconRed from "assets/markerRed.svg";
+import { useNavigate } from "react-router-dom";
 
 type appProps = {
 	sites: Array<any>;
@@ -10,6 +11,9 @@ type appProps = {
 
 function Map({ sites }: appProps) {
 	const { map } = styles;
+
+	const navigate = useNavigate();
+	const handleClick = (id: string) => navigate(`/site/:${id}`);
 
 	const containerStyle = {
 		width: "100%",
@@ -32,7 +36,7 @@ function Map({ sites }: appProps) {
 					url: site.status == "Alert" ? markerIconRed : markerIconGreen,
 				}}
 				onClick={() => {
-					console.log(site.name);
+					navigate(`/site/${site.id}`);
 				}}
 			/>
 		);
@@ -40,8 +44,8 @@ function Map({ sites }: appProps) {
 
 	return (
 		<div className={map}>
-			<LoadScript googleMapsApiKey={key}>
-				<GoogleMap mapContainerStyle={containerStyle} center={center} zoom={9}>
+			<LoadScript googleMapsApiKey={key} >
+				<GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
 					{/* Child components, such as markers, info windows, etc. */}
 					{markers}
 				</GoogleMap>

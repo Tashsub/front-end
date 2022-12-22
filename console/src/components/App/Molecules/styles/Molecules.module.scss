@@ -41,6 +41,7 @@ $small: 800px;
 
 .logoTextPink {
 	@include logoText(1cm, 350, --secondary);
+	margin-top: -10px;
 }
 
 .divRoundForIcon {

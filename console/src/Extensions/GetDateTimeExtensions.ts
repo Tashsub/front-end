@@ -1,4 +1,4 @@
-import { compareAsc, format } from "date-fns";
+import { format } from "date-fns";
 
 export function GetDateTime(date: string) {
 	let parsedDate = new Date(date);

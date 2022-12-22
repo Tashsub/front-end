@@ -37,7 +37,7 @@ function ContentContainer({ sites, error, getSearch }: appProps) {
 					<div className={box}>
 						<Filter getSearch={getSearch} />
 					</div>
-					<div data-testid="div-">{mappedResults}</div>
+					<div data-testid="mapped-sites">{mappedResults}</div>
 				</>
 			)}
 		</div>

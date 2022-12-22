@@ -82,6 +82,12 @@ describe("App", () => {
 			);
 		});
 
-		expect(screen.).toBe(FinalResult);
+		let expectedResult = (
+			await render(finalResult).findByTestId("mapped-sites")
+		).innerHTML;
+
+		let currentScreen = screen.getByTestId("mapped-sites").innerHTML;
+
+		expect(currentScreen).toBe(expectedResult);
 	});
 });

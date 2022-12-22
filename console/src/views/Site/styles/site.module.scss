@@ -1,3 +1,17 @@
 .shell {
-  color: var(--text-white-he);
+	align-content: center;
+	overflow: hidden;
+	justify-items: center;
+	text-align: center;
+}
+
+.homeButton {
+	margin-top: 2cm;
+	width: 3cm;
+	height: 1cm;
+	background-color: var(--text-black-he);
+	color: var(--text-white-he);
+	border: transparent;
+	font-weight: bold;
+  border-radius: 3px;
 }

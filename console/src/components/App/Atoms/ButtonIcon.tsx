@@ -5,11 +5,11 @@ type appProps = {
 	iconName: string;
 };
 
-function ButtonIcon({ iconName }: appProps) {
+function ButtonIcon({ iconName}: appProps) {
 	const { buttonMain, materialIcons } = styles;
 
 	return (
-		<button className={buttonMain}>
+		<button className={buttonMain} >
 			<span className={materialIcons}>{iconName}</span>
 		</button>
 	);

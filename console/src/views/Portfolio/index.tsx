@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import styles from "./styles/Portfolio.module.scss";
 import Menu from "components/App/Organisms/Header";
-import Map from "components/App/Atoms/Map";
+import Map from "components/App/Atoms/MapPortfolio";
 import ContentContainer from "components/App/Organisms/ContentContainer";
-import {useFetchData} from "Hooks/useFetchData";
+import { useFetchData } from "Hooks/useFetchData";
 import { apiEndpoints } from "Api/Endpoints";
 import { sortArrayExtensions } from "Extensions/SortArrayExtensions";
+import ErrorMessage from "components/App/Atoms/ErrorMessage";
 
 export default function Portfolio() {
 	const { shell } = styles;
@@ -35,11 +36,26 @@ export default function Portfolio() {
 			break;
 	}
 
+	if (error) {
+		return (
+			<>
+				<Menu />
+				<ErrorMessage
+					text={"Could not display data. Please try again later."}
+				/>
+			</>
+		);
+	}
+
 	return (
 		<div className={shell}>
 			<Menu />
-			<Map sites={sites} />
-			<ContentContainer sites={sites} error={error} getSearch={setFilter} />
+			{results && (
+				<>
+					<Map sites={sites} />
+					<ContentContainer sites={sites} error={error} getSearch={setFilter} />
+				</>
+			)}
 		</div>
 	);
 }
