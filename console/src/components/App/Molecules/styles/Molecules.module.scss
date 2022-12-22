@@ -117,6 +117,10 @@ $small: 800px;
 	height: fit-content;
 	margin-top: 1.5cm;
 	margin-left: 2cm;
+	@media screen and (max-width: $small) {
+		margin-top: 1cm;
+		margin-left: 1cm;
+	}
 }
 
 .siteName {
