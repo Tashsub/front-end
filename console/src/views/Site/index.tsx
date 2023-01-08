@@ -14,7 +14,8 @@ export default function Site() {
 
 	const { id } = useParams();
 
-	const url = apiEndpoints("sites");
+	const url = apiEndpoints("sites", "https://rich-gold-nightingale-gear.cyclic.app/");
+	
 	const requestObj = {
 		url: url + `/${id}`,
 		method: "GET",

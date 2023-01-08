@@ -11,7 +11,7 @@ import ErrorMessage from "components/App/Atoms/ErrorMessage";
 export default function Portfolio() {
 	const { shell } = styles;
 
-	const url = apiEndpoints("sites");
+	const url = apiEndpoints("sites", "https://rich-gold-nightingale-gear.cyclic.app/");
 
 	const [filter, setFilter] = useState<string>("");
 
@@ -20,7 +20,7 @@ export default function Portfolio() {
 		method: "GET",
 	};
 
-	const { error, loading, results } = useFetchData(requestObj);
+	const { error, results } = useFetchData(requestObj);
 
 	let sites: Array<any> = [];
 

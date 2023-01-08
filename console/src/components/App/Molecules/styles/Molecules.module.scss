@@ -39,8 +39,8 @@ $small: 800px;
 	@include textFormat(1cm, 1000, --text-white-he);
 }
 
-.logoTextPink {
-	@include textFormat(1cm, 350, --secondary);
+.logoTextWhite {
+	@include textFormat(1cm, 350, --warning);
 	margin-top: -10px;
 }
 
