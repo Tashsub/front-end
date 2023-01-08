@@ -5,6 +5,9 @@ Energy Pro is a data visualisation application that showcases a users energy usa
 ## Production Application Link 
 [Click me](https://energyusage.netlify.app/)
 
+## Demo Video
+[Click me](https://drive.google.com/file/d/1cwIIvosciKsXHNcEgH6SrxxIaVKp6rOt/view?usp=share_link)
+
 ## Tech Stack
 
 ###### Frontend 
