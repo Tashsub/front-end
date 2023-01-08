@@ -1,5 +1,3 @@
-# Kraken Flex Front End Engineer Exam
-
 ## Introduction
 
 The Front End Engineer Exam is designed to help you showcase your front end engineering skills. We are interested to see how you work and what your thought process is, there is no single correct way to complete the task.
