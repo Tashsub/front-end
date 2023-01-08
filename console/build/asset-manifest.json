@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c06d3b43.css",
+    "main.js": "/static/js/main.1d63ff99.js",
+    "static/js/787.18baf039.chunk.js": "/static/js/787.18baf039.chunk.js",
+    "static/media/GothamSSm-BlackItalic_Web.woff": "/static/media/GothamSSm-BlackItalic_Web.ef52dae15e75f9d69271.woff",
+    "static/media/GothamSSm-XLightItalic_Web.woff": "/static/media/GothamSSm-XLightItalic_Web.33eaa97170e0a6ec872c.woff",
+    "static/media/GothamSSm-MediumItalic_Web.woff": "/static/media/GothamSSm-MediumItalic_Web.53aa364b18f5eb9fa24d.woff",
+    "static/media/GothamSSm-BookItalic_Web.woff": "/static/media/GothamSSm-BookItalic_Web.4464aa6ce8b8b6988c32.woff",
+    "static/media/GothamSSm-LightItalic_Web.woff": "/static/media/GothamSSm-LightItalic_Web.74449822f47d12685e2f.woff",
+    "static/media/GothamSSm-BoldItalic_Web.woff": "/static/media/GothamSSm-BoldItalic_Web.2d1585c041a2ceee964f.woff",
+    "static/media/GothamSSm-Medium_Web.woff": "/static/media/GothamSSm-Medium_Web.c328510c74745065cc92.woff",
+    "static/media/GothamSSm-Black_Web.woff": "/static/media/GothamSSm-Black_Web.46a3722e3bd89a2b83e6.woff",
+    "static/media/GothamSSm-XLight_Web.woff": "/static/media/GothamSSm-XLight_Web.440d0fa3478506b02d0c.woff",
+    "static/media/GothamSSm-Bold_Web.woff": "/static/media/GothamSSm-Bold_Web.6969e4bc51ea2e84accc.woff",
+    "static/media/GothamSSm-Book_Web.woff": "/static/media/GothamSSm-Book_Web.66e30a197d6da2d000ac.woff",
+    "static/media/GothamSSm-Light_Web.woff": "/static/media/GothamSSm-Light_Web.9549abde91d6ffe3cf8d.woff",
+    "static/media/GothamSSm-BlackItalic_Web.woff2": "/static/media/GothamSSm-BlackItalic_Web.149b7c0bc7fa13ac264c.woff2",
+    "static/media/GothamSSm-XLightItalic_Web.woff2": "/static/media/GothamSSm-XLightItalic_Web.1741bd99f0644fc7cfd2.woff2",
+    "static/media/GothamSSm-MediumItalic_Web.woff2": "/static/media/GothamSSm-MediumItalic_Web.7a84ed4b1e364f3e3c41.woff2",
+    "static/media/GothamSSm-BookItalic_Web.woff2": "/static/media/GothamSSm-BookItalic_Web.12b28fd14e608eca839e.woff2",
+    "static/media/GothamSSm-BoldItalic_Web.woff2": "/static/media/GothamSSm-BoldItalic_Web.57af44fc3f69b6aec4c9.woff2",
+    "static/media/GothamSSm-LightItalic_Web.woff2": "/static/media/GothamSSm-LightItalic_Web.819fd25595a830fde159.woff2",
+    "static/media/GothamSSm-Black_Web.woff2": "/static/media/GothamSSm-Black_Web.0820ae4e55a1307314f4.woff2",
+    "static/media/GothamSSm-Medium_Web.woff2": "/static/media/GothamSSm-Medium_Web.9604c34cb4433672053b.woff2",
+    "static/media/GothamSSm-Bold_Web.woff2": "/static/media/GothamSSm-Bold_Web.644a1eedabd8ce628449.woff2",
+    "static/media/GothamSSm-XLight_Web.woff2": "/static/media/GothamSSm-XLight_Web.87db3dd375e51e283771.woff2",
+    "static/media/GothamSSm-Book_Web.woff2": "/static/media/GothamSSm-Book_Web.299e9ca606232b303d77.woff2",
+    "static/media/GothamSSm-Light_Web.woff2": "/static/media/GothamSSm-Light_Web.b0e79820df3aed09e69a.woff2",
+    "static/media/monogram.svg": "/static/media/monogram.c526f0a6f008b8d3bf2cf9955dc05702.svg",
+    "index.html": "/index.html",
+    "static/media/markerRed.svg": "/static/media/markerRed.fad05deb92971d9fa869c1687b2dcf92.svg",
+    "static/media/markerGreen.svg": "/static/media/markerGreen.f9226691f9065983471f36ca5cae0ee7.svg",
+    "main.c06d3b43.css.map": "/static/css/main.c06d3b43.css.map",
+    "main.1d63ff99.js.map": "/static/js/main.1d63ff99.js.map",
+    "787.18baf039.chunk.js.map": "/static/js/787.18baf039.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c06d3b43.css",
+    "static/js/main.1d63ff99.js"
+  ]
+}
