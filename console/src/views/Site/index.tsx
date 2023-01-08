@@ -14,8 +14,11 @@ export default function Site() {
 
 	const { id } = useParams();
 
-	const url = apiEndpoints("sites", "https://rich-gold-nightingale-gear.cyclic.app/");
-	
+	const url = apiEndpoints(
+		"sites",
+		"https://rich-gold-nightingale-gear.cyclic.app/"
+	);
+
 	const requestObj = {
 		url: url + `/${id}`,
 		method: "GET",
@@ -48,7 +51,7 @@ export default function Site() {
 					>
 						Return to Home
 					</button>
-					<ContentContainerSite site={site}/>
+					<ContentContainerSite site={site} />
 				</>
 			)}
 		</div>
