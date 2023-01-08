@@ -28,9 +28,11 @@ Components have been split up into three key folders.
 - Organisms: these are the most complex and make up a large part of the functionality of the application such as the menu and cards. 
 
 ## React Core Concepts
-- Hooks
-- React Router
-- 
+- Hooks resuable hook to fetch data and handle errors thrown from api calls
+- React Router / Navigation
+- Data propagation via props 
+- conditonal rendering to handle erros and content
+- managing state
 
 ## Iconography
 Google Icons (https://fonts.google.com/icons)
@@ -43,7 +45,7 @@ working as expected. Precautionary step error handling was taken into account in
 and as a result a fall back error message is displayed.
 
 
-## Testing 
+## Testing (React Testing library and Jest)
 
 - Test 1: test written to ensure that the correct number of sites are rendered when a user viewing content via
 the Portfolio view.
